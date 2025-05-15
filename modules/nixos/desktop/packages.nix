@@ -7,5 +7,6 @@
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
+    greetd.tuigreet
   ];
 }

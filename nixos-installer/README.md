@@ -142,7 +142,7 @@ Then, generate the NixOS configuration:
 nixos-generate-config --root /mnt
 
 # we need to update our filesystem configs in old hardware-configuration.nix according to the generated one.
-cp /etc/nixos/hardware-configuration.nix ./nix-config/hosts/nixosvmai/hardware-configuration.nix
+cp /mnt/etc/nixos/hardware-configuration.nix ./nix-config/hosts/nixosvmai/hardware-configuration.nix
 vim ./nixos-config-manu/hosts/nixosvmai/hardware-configuration.nix
 ```
 
