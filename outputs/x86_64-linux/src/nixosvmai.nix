@@ -19,7 +19,7 @@
       # host specific
       "hosts/${name}"
       # nixos hardening / disabled for now
-      # "hardening/nixpaks"
+      "hardening/nixpaks"
       # "hardening/apparmor"
     ];
     home-modules = map mylib.relativeToRoot [
