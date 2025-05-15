@@ -111,7 +111,6 @@ nixosvmai mode="default":
 [group('desktop')]
 asuslaptop mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *;
   nixos-switch asuslaptop-hyprland {{mode}}
 
 
@@ -131,7 +130,6 @@ col tag:
 [group('homelab')]
 local name mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *;
   nixos-switch {{name}} {{mode}}
 
 # Build and upload a vm image
@@ -139,7 +137,6 @@ local name mode="default":
 [group('homelab')]
 upload-vm name mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *;
   upload-vm {{name}} {{mode}}
 
 # Deploy all the KubeVirt nodes(Physical machines running KubeVirt)
@@ -157,7 +154,6 @@ shoryu:
 [group('homelab')]
 shoryu-local mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *; 
   nixos-switch kubevirt-shoryu {{mode}}
 
 ############################################################################
@@ -171,7 +167,6 @@ shoryu-local mode="default":
 [group('homelab')]
 upload-idols mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *; 
   upload-vm aquamarine {{mode}}
   upload-vm ruby {{mode}}
   upload-vm kana {{mode}}
@@ -184,8 +179,7 @@ aqua:
 [linux]
 [group('homelab')]
 aqua-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
+  #!/usr/bin/env bash
   nixos-switch aquamarine {{mode}}
 
 
@@ -200,7 +194,6 @@ aqua-local mode="default":
 [group('homelab')]
 upload-k3s-prod mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *; 
   upload-vm k3s-prod-1-master-1 {{mode}}; 
   upload-vm k3s-prod-1-master-2 {{mode}}; 
   upload-vm k3s-prod-1-master-3 {{mode}}; 
@@ -212,7 +205,6 @@ upload-k3s-prod mode="default":
 [group('homelab')]
 upload-k3s-test mode="default":
   #!/usr/bin/env nu
-  use {{utils_nu}} *; 
   upload-vm k3s-test-1-master-1 {{mode}}; 
   upload-vm k3s-test-1-master-2 {{mode}}; 
   upload-vm k3s-test-1-master-3 {{mode}};
