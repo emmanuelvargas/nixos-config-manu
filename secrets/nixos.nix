@@ -15,8 +15,7 @@ with lib; let
     || cfg.server.network.enable
     || cfg.server.operation.enable
     || cfg.server.kubernetes.enable
-    || cfg.server.webserver.enable
-    || cfg.server.storage.enable;
+    || cfg.server.webserver.enable;
 
   noaccess = {
     mode = "0000";
