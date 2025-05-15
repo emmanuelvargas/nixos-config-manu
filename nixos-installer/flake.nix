@@ -15,7 +15,7 @@
     ...
   }: {
     nixosConfigurations = {
-      nixosryanai = nixpkgs.lib.nixosSystem {
+      nixosvmai = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs =
           inputs
@@ -39,8 +39,8 @@
           ../modules/nixos/base/user-group.nix
           ../modules/nixos/base/networking.nix
 
-          ../hosts/nixosryanai/hardware-configuration.nix
-          ../hosts/nixosryanai/impermanence.nix
+          ../hosts/nixosvmai/hardware-configuration.nix
+          ../hosts/nixosvmai/impermanence.nix
         ];
       };
     };
