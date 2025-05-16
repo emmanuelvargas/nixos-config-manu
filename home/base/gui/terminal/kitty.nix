@@ -21,9 +21,9 @@
     # and it's installed by home-manager if `theme` is specified.
     themeFile = "Catppuccin-Mocha";
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = lib.mkForce "JetBrainsMono Nerd Font";
       # use different font size on macOS
-      size = 11;
+      size = lib.mkForce 11;
     };
 
     # consistent with other terminal emulators
@@ -33,9 +33,9 @@
     };
 
     settings = {
-      background_opacity = "0.93";
-      enable_audio_bell = false;
-      tab_bar_edge = "top"; # tab bar on top
+      background_opacity = lib.mkForce "0.93";
+      enable_audio_bell = lib.mkForce false;
+      tab_bar_edge = lib.mkForce "top"; # tab bar on top
       #  To resolve issues:
       #    1. https://github.com/ryan4yin/nix-config/issues/26
       #    2. https://github.com/ryan4yin/nix-config/issues/8

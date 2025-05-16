@@ -3,6 +3,7 @@
   config,
   lib,
   myvars,
+  inputs,
   ...
 }:
 with lib; let

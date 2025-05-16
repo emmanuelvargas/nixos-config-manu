@@ -3,12 +3,18 @@
   lib,
   pkgs,
   myvars,
+  stylix,
   ...
 }: {
+
   # Styling Options
+  imports = [
+    stylix.nixosModules.stylix
+    ];
   stylix = {
     enable = true;
-    image = myvars.stylixImage;
+    autoEnable = false;
+#    image = myvars.stylixImage;
     base16Scheme = {
       base00 = "282936";
       base01 = "3a3c4e";

@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: {
   # If your themes for mouse cursor, icons or windows don’t load correctly,
@@ -31,27 +32,27 @@
     enable = true;
 
     font = {
-      name = "Noto Sans";
+      name = lib.mkForce "Noto Sans";
       package = pkgs.noto-fonts;
-      size = 11;
+      size = lib.mkForce 11;
     };
 
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
 
     iconTheme = {
-      name = "Papirus-Dark";
+      name = lib.mkForce "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
 
     theme = {
       # https://github.com/catppuccin/gtk
-      name = "catppuccin-macchiato-pink-compact";
-      package = pkgs.catppuccin-gtk.override {
-        # https://github.com/NixOS/nixpkgs/blob/nixos-23.05/pkgs/data/themes/catppuccin-gtk/default.nix
-        accents = ["pink"];
-        size = "compact";
-        variant = "macchiato";
-      };
+      name = lib.mkForce "catppuccin-macchiato-pink-compact";
+     # package = lib.mkForce pkgs.catppuccin-gtk.override {
+     #   # https://github.com/NixOS/nixpkgs/blob/nixos-23.05/pkgs/data/themes/catppuccin-gtk/default.nix
+     #   accents = ["pink"];
+     #   size = "compact";
+     #   variant = "macchiato";
+     # };
     };
   };
 }
