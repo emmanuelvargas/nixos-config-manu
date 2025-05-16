@@ -54,6 +54,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix.url = "github:danth/stylix";
+
     impermanence.url = "github:nix-community/impermanence";
 
     # community wayland nixpkgs
