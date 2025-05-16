@@ -23,7 +23,7 @@
     font = {
       name = "JetBrainsMono Nerd Font";
       # use different font size on macOS
-      size = 13;
+      size = 11;
     };
 
     # consistent with other terminal emulators
