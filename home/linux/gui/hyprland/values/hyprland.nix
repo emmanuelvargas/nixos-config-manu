@@ -56,6 +56,10 @@ in {
       source = ../conf/waybar;
       recursive = true;
     };
+    "hypr/rofi" = {
+      source = ../conf/rofi;
+      recursive = true;
+    };
     "hypr/wlogout" = {
       source = ../conf/wlogout;
       recursive = true;

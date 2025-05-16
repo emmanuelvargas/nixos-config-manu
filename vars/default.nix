@@ -22,4 +22,6 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjaVclo7DZzoNgTowU5PQaTIXclfhTO9yizIIFjd25Y emmanuel.vargas@iress.com"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEG9sbnm7GF7LQ/csbk729YUlu89TSY2mLDmla/tgKGc emmanuel.vargas@gmail.com"
   ];
+  # Set Stylix Image
+  stylixImage = ../wallpapers/AnimeGirlNightSky.jpg;
 }

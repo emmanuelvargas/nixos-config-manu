@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-if [[ ! $(pidof anyrun) ]]; then
-	anyrun
-else
-	pkill anyrun
+# if [[ ! $(pidof anyrun) ]]; then
+# 	anyrun
+# else
+# 	pkill anyrun
+# fi
+# check if rofi is already running
+if pidof rofi > /dev/null; then
+	pkill rofi
 fi
+rofi -show drun
+
