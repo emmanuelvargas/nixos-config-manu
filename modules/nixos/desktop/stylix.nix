@@ -4,13 +4,11 @@
   pkgs,
   myvars,
   ...
-}: let
-  inherit (import ../../../../vars/default.nix) stylixImage;
-in {
+}: {
   # Styling Options
   stylix = {
     enable = true;
-    image = stylixImage;
+    image = myvars.stylixImage;
     # base16Scheme = {
     #   base00 = "282936";
     #   base01 = "3a3c4e";
