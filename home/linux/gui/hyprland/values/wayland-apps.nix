@@ -39,7 +39,7 @@
       # Advantages to run foot in server mode including reduced memory footprint and startup time.
       # The downside is a performance penalty. If one window is very busy with, for example, producing output,
       # then other windows will suffer. Also, should the server process crash, all windows will be gone.
-      server.enable = true;
+      server.enable = false;
     };
 
     # source code: https://github.com/nix-community/home-manager/blob/master/modules/programs/chromium.nix
