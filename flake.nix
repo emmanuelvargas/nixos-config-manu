@@ -109,6 +109,20 @@
       flake = false;
     };
 
+    # TUI
+    oh-my-tmux = {
+      url = "github:gpakosz/.tmux";
+      flake = false;
+    };
+    oh-my-zsh = {
+      url = "github:ohmyzsh/ohmyzsh";
+      flake = false;
+    };
+    zsh-completions-src = {
+      url = "github:zsh-users/zsh-completions";
+      flake = false;
+    };
+
     ########################  My own repositories  #########################################
 
     # my private secrets, it's a private repository, you need to replace it with your own.

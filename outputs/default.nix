@@ -125,10 +125,15 @@ in {
           alejandra
           deadnix
           statix
+          tmux
           # spell checker
           typos
           # code formatter
           nodePackages.prettier
+          zsh-autosuggestions
+          zsh-completions
+          zsh-fzf-tab
+          zsh-syntax-highlighting
         ];
         name = "dots";
         shellHook = ''

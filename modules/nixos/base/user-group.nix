@@ -24,6 +24,7 @@
     # we have to use initialHashedPassword here when using tmpfs for /
     inherit (myvars) initialHashedPassword;
     home = "/home/${myvars.username}";
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [
       myvars.username

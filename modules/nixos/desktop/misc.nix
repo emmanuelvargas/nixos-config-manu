@@ -5,13 +5,22 @@
   pkgs-unstable,
   ...
 }: {
+  environment.pathsToLink = [
+    "/libexec"
+    "/share/fzf-tab"
+    "/share/zsh-autosuggestions"
+    "/share/zsh-syntax-highlighting"
+  ];
   # add user's shell into /etc/shells
   environment.shells = with pkgs; [
-    bashInteractive
+    #bashInteractive
     #pkgs-unstable.nushell
+    pkgs.zsh
   ];
+  programs.zsh.enable = true;
+
   # set user's default shell system-wide
-  users.defaultUserShell = pkgs.bashInteractive;
+  users.defaultUserShell = pkgs.zsh;
 
   # fix for `sudo xxx` in kitty/wezterm/foot and other modern terminal emulators
   security.sudo.keepTerminfo = true;
