@@ -1,6 +1,7 @@
 {
   myvars,
   config,
+  pkgs,
   ...
 }: {
   # Don't allow mutation of users outside the config.

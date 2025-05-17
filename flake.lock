@@ -1480,6 +1480,38 @@
         "type": "github"
       }
     },
+    "oh-my-tmux": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743583190,
+        "narHash": "sha256-2mdbOKCiwkr3FgjjyThezL+VVf5nm3+04idMETBLeao=",
+        "owner": "gpakosz",
+        "repo": ".tmux",
+        "rev": "94df58b12c1fda2ba92bfdc0092661d1a7895777",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gpakosz",
+        "repo": ".tmux",
+        "type": "github"
+      }
+    },
+    "oh-my-zsh": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1747259330,
+        "narHash": "sha256-abhfCm/7L866nLbucPNHfM5xLU7CYfb8fbK6auUOw3Q=",
+        "owner": "ohmyzsh",
+        "repo": "ohmyzsh",
+        "rev": "c95509ebfdbcc3c497f12697cfd2717bcb0a528b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ohmyzsh",
+        "repo": "ohmyzsh",
+        "type": "github"
+      }
+    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": "flake-utils_3",
@@ -1634,9 +1666,12 @@
         "nuenv": "nuenv",
         "nur-ataraxiasjel": "nur-ataraxiasjel",
         "nur-ryan4yin": "nur-ryan4yin",
+        "oh-my-tmux": "oh-my-tmux",
+        "oh-my-zsh": "oh-my-zsh",
         "polybar-themes": "polybar-themes",
         "pre-commit-hooks": "pre-commit-hooks_3",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "zsh-completions-src": "zsh-completions-src"
       }
     },
     "rust-overlay": {
@@ -1926,6 +1961,22 @@
         "owner": "jcollie",
         "ref": "56c159be489cc6c0e73c3930bd908ddc6fe89613",
         "repo": "zon2nix",
+        "type": "github"
+      }
+    },
+    "zsh-completions-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1746671065,
+        "narHash": "sha256-6F4SvMxC/zXkzysNI8YdB/eNh7kImaOjyhEkvZuXVf4=",
+        "owner": "zsh-users",
+        "repo": "zsh-completions",
+        "rev": "98dd809126c0748d7058eb7684dbb44d3f4e9c16",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-completions",
         "type": "github"
       }
     }

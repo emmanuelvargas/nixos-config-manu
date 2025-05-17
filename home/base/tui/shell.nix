@@ -7,9 +7,9 @@
 in {
   home.file = {
       ".zshrc" = {
-      source = ../..../.zshrc;
+      source = ../../../.zshrc;
     };
-  }
+  };
   programs.bash = {
     # load the alias file for work
     bashrcExtra = ''
