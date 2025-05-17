@@ -1,5 +1,6 @@
 {
   config,
+  oh-my-zsh,
   pkgs-unstable,
   ...
 }: let
@@ -9,6 +10,14 @@ in {
       ".zshrc" = {
       source = ../../../.zshrc;
     };
+  };
+  xdg.dataFile = {
+    "oh-my-zsh" = {
+      source = oh-my-zsh;
+    };
+      #    "oh-my-zsh-custom" = {
+      #      source = ../../../.local/share/oh-my-zsh-custom;
+      #    };
   };
   programs.bash = {
     # load the alias file for work

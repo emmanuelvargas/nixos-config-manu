@@ -3,7 +3,7 @@ export PATH="${HOME}/.local/share/cargo/bin:${HOME}/.local/bin:${PATH}"
 
 # Path to oh-my-zsh installation.
 ZSH="${HOME}/.local/share/oh-my-zsh"
-ZSH_CUSTOM="${HOME}/.local/share/oh-my-zsh-custom"
+#ZSH_CUSTOM="${HOME}/.local/share/oh-my-zsh-custom"
 
 # dotfiles
 case "${OSTYPE}" in
@@ -151,11 +151,11 @@ alias -g J='| bat --language=json'
 alias -g Y='| bat --language=yaml'
 alias e="${EDITOR}"
 
-source /run/current-system/sw/share/fzf-tab/fzf-tab.zsh
+#source /run/current-system/sw/share/fzf-tab/fzf-tab.zsh
 # zsh-users
 # Load zsh-syntax-highlighting after all custom widgets have been created
-source /run/current-system/sw/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /run/current-system/sw/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /run/current-system/sw/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /run/current-system/sw/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Clean up variables
 unset \
