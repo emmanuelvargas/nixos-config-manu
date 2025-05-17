@@ -1,8 +1,8 @@
 _: (_: super: {
   zsh-completions = (
-    prev.zsh-completions.overrideAttrs {
+    super.zsh-completions.overrideAttrs {
       version = "HEAD";
-      src = zsh-completions-src;
+      src = super.zsh-completions-src;
       installPhase = ''
         functions=(
           _direnv

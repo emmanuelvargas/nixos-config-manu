@@ -85,8 +85,8 @@ plugins=(
   fzf
   git
   gitignore
-  kube-ps1
-  kubectl
+  #kube-ps1
+  #kubectl
   sudo
   terraform
 )
@@ -109,36 +109,35 @@ KUBE_PS1_SEPARATOR=''
 
 # Adapted PROMPT for kube_ps1 from ${ZSH}/themes/tjkirch.zsh-theme
 PROMPT='%(?, ,%{$fg[red]%}FAIL: $?%{$reset_color%}
-)$(kube_ps1)
-%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}: %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info)
+) %{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}: %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info)
 $(prompt_char) '
 
 # Add aws prompt
 RPROMPT='$(aws_prompt_info)'"${RPROMPT}"
 
 # Automatically enable kube-ps1 when certain commands are executed
-function _enable_kube-ps1 {
-  local -ra KUBE_CMDS=(
-    k3d
-    kubecolor
-    kubectl
-    kubectx
-    kubens
-    kustomize
-    tk
-  )
-  if (( $KUBE_CMDS[(I)${2%% *}] )); then
-    kubeon
-  fi
-}
+#function _enable_kube-ps1 {
+#  local -ra KUBE_CMDS=(
+#    k3d
+#    kubecolor
+#    kubectl
+#    kubectx
+#    kubens
+#    kustomize
+#    tk
+#  )
+#  if (( $KUBE_CMDS[(I)${2%% *}] )); then
+#    kubeon
+#  fi
+#}
 
 if ! (( $preexec_functions[(I)_enable_kube-ps1] )); then
   preexec_functions+=(_enable_kube-ps1)
 fi
 
 # kubecolor
-alias kubectl='kubecolor'
-compdef kubecolor='kubectl'
+#alias kubectl='kubecolor'
+#compdef kubecolor='kubectl'
 
 # Aliases
 alias argocd='KUBECTL_EXTERNAL_DIFF="git --no-pager diff --no-index" argocd'
